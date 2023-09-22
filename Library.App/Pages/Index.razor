@@ -1,0 +1,11 @@
+﻿@page "/"
+@using Business.Classes
+@inject Business b
+
+<h1>My Library</h1>
+<ul>
+    @foreach(var book in b.GetBooks())
+    {
+        <li>@book.Title @book.Description @book.Id</li>
+    }
+</ul>
